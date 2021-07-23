@@ -21,11 +21,9 @@ int main()
         minYear = min(year, minYear);
         maxYear = max(maxYear, year);
     }
-    //cout << minYear << " " << maxYear << endl;
 
     int realStart = floor(minYear / 12.0) * 12;
     int realEnd = ceil(maxYear / 12.0) * 12;
-    //cout << realEnd << " " << realStart << endl;
     for (int i = realStart; i <= realEnd; i += 12)
     {
         years.push_back(i);
@@ -41,7 +39,7 @@ int main()
 
     int start = years.at(0);
     int total = 0;
-    for (int i = 1; i < years.size() - 1; i++) //make sure to visit years of the ox (if they are repeated)
+    for (int i = 1; i < years.size() - 1; i++)
     {
         if (years.at(i) % 12 == 0)
         {
@@ -58,7 +56,6 @@ int main()
                 {
                     int numYears = start - naturalEnd; //years spent naturally
                     //cout << start << " " << naturalEnd << endl;
-
                     start = years.at(j - 1);
                     i = j;
                     total += numYears;
