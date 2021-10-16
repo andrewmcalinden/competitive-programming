@@ -1,3 +1,5 @@
+package region;
+
 import java.util.*;
 import java.io.*;
 
@@ -36,7 +38,7 @@ class Kevin {
             totalDist += dist;
             totalTime += seconds;
             longestDist = Math.max(dist, longestDist);
-            longestTime = Math.max(time, longestTime);
+            //longestTime = Math.max(time, longestTime);
             fastestPace = Math.min(pace, fastestPace);
 
             if (dist >= 5 && dist < 10){

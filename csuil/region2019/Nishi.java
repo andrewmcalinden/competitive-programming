@@ -69,13 +69,12 @@ public class Nishi {
         }
         else{
             int i = 0;
-            boolean decimal = false;
             while (true){
                 if (sNum.charAt(i) == '0'){
                     //dp 
                 }
                 else if (sNum.charAt(i) == '.'){
-                    decimal = true;
+                    //decimal = true;
                 }
                 else{
                     break;

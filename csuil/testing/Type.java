@@ -1,7 +1,9 @@
 package testing;
 
 public class Type {
-    public Integer i;
+    public int i;
 
-    public Type(){}
+    public Type(int i){
+        this.i = i;
+    }
 }
