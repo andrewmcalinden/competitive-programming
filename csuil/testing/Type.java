@@ -1,9 +1,11 @@
 package testing;
 
 public class Type {
-    public int i;
+    public String s;
 
-    public Type(int i){
-        this.i = i;
+    public Type()
+    {
+        s += 1;
+        System.out.println("made type");
     }
 }

@@ -19,12 +19,14 @@ class Maximo {
             //System.out.println(set1);
 
             lineString = input.nextLine();
+            line.close();
             line = new Scanner(lineString.substring(3, lineString.length() - 1));
             line.useDelimiter(",");
             HashSet<Integer> set2 = new HashSet<>();
             while (line.hasNextInt()) {
                 set2.add(line.nextInt());
             }
+            line.close();
 
             boolean aSubB = true;
             boolean bSubA = true;
@@ -76,7 +78,6 @@ class Maximo {
 
                 
             }
-
         }
     }
 }

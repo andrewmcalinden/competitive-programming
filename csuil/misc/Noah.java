@@ -47,6 +47,7 @@ public class Noah {
             else {
                 years.put(year, 1);
             }
+            line.close();
         }
         Collections.sort(order);
 
@@ -69,6 +70,8 @@ public class Noah {
         for (int m : years.keySet()) {
             System.out.println(m + ": " + years.get(m));
         }
+        input.close();
+
     } 
 
     private static class Car implements Comparable<Car>{

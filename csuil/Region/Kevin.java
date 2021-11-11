@@ -11,21 +11,21 @@ class Kevin {
         double longestDist = 0;
         double longestTime = 0;
         double fastestPace = 0;
-        double shortTotalDist = 0;
-        double shortTotalPace = 0;
-        double medTotalDist = 0;
-        double medTotalPace = 0;
-        double longTotalDist = 0;
-        double longTotalPace = 0;
+        // double shortTotalDist = 0;
+        // double shortTotalPace = 0;
+        // double medTotalDist = 0;
+        // double medTotalPace = 0;
+        // double longTotalDist = 0;
+        // double longTotalPace = 0;
            
         int numRuns = 0;
         while(input.hasNextLine()) {
             String line = input.nextLine();
             Scanner lineScan = new Scanner(line);
-            String date = lineScan.next();
-            String [] dateRay = date.split("/");
-            int month = Integer.parseInt(dateRay[0]);
-            int day = Integer.parseInt(dateRay[1]);
+            //String date = lineScan.next();
+            //String [] dateRay = date.split("/");
+            //int month = Integer.parseInt(dateRay[0]);
+            //int day = Integer.parseInt(dateRay[1]);
             double dist = Integer.parseInt(lineScan.next());
             String time = lineScan.next();
             String[] timeRay = time.split(":");
@@ -42,18 +42,19 @@ class Kevin {
             fastestPace = Math.min(pace, fastestPace);
 
             if (dist >= 5 && dist < 10){
-                shortTotalDist += dist;
-                shortTotalPace += pace;
+                // shortTotalDist += dist;
+                // shortTotalPace += pace;
             }
             else if (dist >= 10 && dist < 42.195 / 2.0){
-                medTotalDist += dist;
-                medTotalPace += pace;
+                // medTotalDist += dist;
+                // medTotalPace += pace;
             }
             else if(dist >= 42.195 / 2.0){
-                longTotalDist += dist;
-                longTotalPace += pace;
+                // longTotalDist += dist;
+                // longTotalPace += pace;
             }
             numRuns++;
+            lineScan.close();
         }
 
         System.out.print("Total distance = ");
