@@ -22,6 +22,7 @@ public class Joe {
                 System.out.print(word + " ");
             }
             System.out.println();
+            currentLine.close();
         }
 
     }

@@ -27,6 +27,7 @@ public class Emila {
             }
 
             System.out.println(currentHour + ":" + currentMin);
+            input.close();
         }
     }
 }

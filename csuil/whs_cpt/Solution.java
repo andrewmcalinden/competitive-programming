@@ -1,3 +1,5 @@
+package whs_cpt;
+
 import java.io.*;
 import java.util.*;
 

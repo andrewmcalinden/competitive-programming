@@ -12,5 +12,6 @@ public class Template {
         for (int run = 1; run <=runs; run++){
 
         }
+        input.close();
     }
 }

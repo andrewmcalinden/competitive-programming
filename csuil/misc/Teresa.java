@@ -1,7 +1,6 @@
 package misc;
 
 import java.util.*;
-import java.io.*;
 
 public class Teresa {
     public static void main(String [] args){
@@ -39,6 +38,8 @@ public class Teresa {
             }
             System.out.println("++++++++++++");
         }
+        input.close();
+
     }
 
     public static int[][] flipMatrix(int [][] matrix){

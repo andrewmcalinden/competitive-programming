@@ -2,7 +2,6 @@ package region;
 
 import java.io.*;
 import java.util.*;
-import java.math.*;
 import static java.lang.System.*;
 
 public class Mahesh {

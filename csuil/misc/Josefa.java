@@ -23,5 +23,7 @@ public class Josefa {
                 System.out.println(num + " = " + ans);
             }
         }
+        input.close();
+
     }
 }

@@ -67,5 +67,7 @@ public class Josey {
                 System.out.println(ans);
             }
         }
+        input.close();
+
     }
 }
