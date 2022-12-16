@@ -7,48 +7,42 @@ public class Quicksort {
     public static void main(String[] args) {
         int[] nums = new int[] { 8, 7, 3, 5, 6, 0, 8, 2, -5, 9, 0 };
         System.out.println(Arrays.toString(nums));
-        sort(nums, 0, nums.length - 1);
+        quickSort(nums, 0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
+        //very robust testing yessir
     }
 
-    public static void sort(int[] nums, int left, int right) {
-        if (left < right){
-            int mid = partition(nums, left, right);
-
-            sort(nums, left, mid); //before pivot
-            sort(nums, mid + 1, right); //after pivot
+    public static void quickSort(int[] nums, int l, int r) {
+        if (l < r) {
+            int pivot = partition(nums, l, r);
+            quickSort(nums, l, pivot - 1);
+            quickSort(nums, pivot + 1, r);
         }
     }
 
-    //returns true location of pivot element
-    public static int partition(int[] nums, int left, int right) {
-        Random r = new Random();
-        int pivotVal = nums[r.nextInt(nums.length)]; //maybe make random
-        right++;
-        left--;
-
-        while(true){
-            // find first element less than pivot to the right of it
-
-            do{
-                right--;
+    public static int partition(int[] nums, int lBound, int rBound) {
+        int val = nums[rBound];
+        int r = rBound - 1;
+        int l = lBound;
+        while (true) {
+            while (l < rBound && nums[l] < val) {
+                l++;
             }
-            while(nums[right] > pivotVal);
-
-            do {
-                left++;
-            } while (nums[left] < pivotVal);
-            //if we still have elements out of place
-            if (left < right){
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
+            while (r > lBound && nums[r] > val) {
+                r--;
             }
-            //pivot element is in correct spot, return that spot
-            else{
-                return right;
+            if (l < r) {
+                int temp = nums[l];
+                nums[l] = nums[r];
+                nums[r] = temp;
+                l++;
+                r--;
+            } else {
+                break;
             }
         }
-        
+        nums[rBound] = nums[l];
+        nums[l] = val;
+        return l;
     }
 }
